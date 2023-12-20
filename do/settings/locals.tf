@@ -19,6 +19,6 @@ locals {
 
   web_project      = split("-", var.workspace)[0]
   environment_slug = split("-", var.workspace)[1]
-  env              = local.environment_slug # short name for environment_slug
+  env              = local.environment_slug # alias for environment_slug
   region           = lookup(local.environments, local.environment_slug).region
 }
